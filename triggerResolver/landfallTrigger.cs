@@ -12,5 +12,9 @@ public class landfallTrigger {
     {
         return scuteCopies * 2 ;
     }
+    public static string hedronCrab()
+    {
+        return "target player mills 3";
+    }
 }
 
