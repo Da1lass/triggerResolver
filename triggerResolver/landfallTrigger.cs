@@ -16,5 +16,13 @@ public class landfallTrigger {
     {
         return "target player mills 3";
     }
+    public static int lotusCobraGM(int gFMana)
+    {
+        return gFMana + 1;
+    }
+    public static int lotusCobraUM(int uFMana)
+    {
+        return uFMana + 1;
+    }
 }
 
