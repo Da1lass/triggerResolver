@@ -39,7 +39,7 @@ if (lotusCobraValidChoices.Contains(choice))
 }
 else 
 {
-    while (! lotusCobraValidChoices.Contains(choice))
+    while (!lotusCobraValidChoices.Contains(choice))
     {
         choice = System.Console.ReadLine().ToUpper();
     }
