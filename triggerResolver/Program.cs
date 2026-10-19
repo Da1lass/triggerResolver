@@ -3,7 +3,7 @@
 int gFMana; gFMana = 0;
 int uFMana; uFMana = 0;
 int cFMana; cFMana = 0;
-char[] lotuscobraValidChoices = ['g','u'];
+char[] lotuscobraValidChoices = ['G','U'];
 
 int landCount; landCount = 6;
 int scuteCopies; scuteCopies = 1;
@@ -21,8 +21,27 @@ else
 }
 
 
-System.Console.WriteLine("What color of floatig mana: G(reen), U(Blue)");
-char choice = Convert.ToChar(System.Console.ReadLine());
+System.Console.WriteLine("What color of floatig mana: G(reen), (Bl)U(e)");
+char choice = Convert.ToChar(System.Console.ReadLine().ToUpper());
+
+if (lotuscobraValidChoices.Contains(choice))
+{
+    if (choice == lotuscobraValidChoices[0])
+    {
+        gFMana = landfallTrigger.lotusCobraGM(gFMana);
+    }
+    else if (choice == lotuscobraValidChoices[1]);
+    {
+        uFMana = landfallTrigger.lotusCobraUM(uFMana);
+    }
+}
+else 
+{
+    while (!lotuscobraValidChoices.Contains(choice))
+    {
+        choice = Convert.ToChar(System.Console.ReadLine().ToUpper());
+    }
+}
 
 
 System.Console.WriteLine(insectToken);
