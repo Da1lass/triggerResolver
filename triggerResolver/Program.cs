@@ -24,12 +24,6 @@ else
 System.Console.WriteLine("What color of floatig mana: G(reen), U(Blue)");
 char choice = Convert.ToChar(System.Console.ReadLine());
 
-if (choice == lotuscobraValidChoices[0] || choice == lotuscobraValidChoices[1]) {
-    if (choice == 'g') { gFMana = landfallTrigger.lotusCobraGM(gFMana); }
-    else if (choice == 'u') { uFMana = landfallTrigger.lotusCobraUM(uFMana);} }
-else {
-    while (choice != lotuscobraValidChoices[0] || choice != lotuscobraValidChoices[1]) { 
-        choice = Convert.ToChar(System.Console.ReadLine()); } }
 
 System.Console.WriteLine(insectToken);
 System.Console.WriteLine(scuteCopies);
