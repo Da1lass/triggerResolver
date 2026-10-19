@@ -3,7 +3,6 @@ using System;
 namespace triggerResolver;
 
 public class landfallTrigger {
-
     public static int ScuteSwarmL6(int insectToken) /*runs if landcount < 6*/
     {
         return insectToken + 1;
@@ -12,7 +11,7 @@ public class landfallTrigger {
     {
         return scuteCopies * 2 ;
     }
-    public static string hedronCrab()
+    public static string HedronCrab()
     {
         return "target player mills 3";
     }
