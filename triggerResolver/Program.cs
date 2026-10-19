@@ -2,8 +2,8 @@
 //floating mana counts and other related vars
 int gFMana; gFMana = 0;
 int uFMana; uFMana = 0;
-int cFMana; cFMana = 0;
-char[] lotusCobraValidChoices = ['G','U']; char[] tirelessProvider = ['F','T'];
+//int cFMana; cFMana = 0;
+string[] lotusCobraValidChoices = ["G","U"]; string[] tirelessProvider = ["F","T"];
 
 int landCount; landCount = 6;
 int scuteCopies; scuteCopies = 1;
@@ -24,7 +24,7 @@ else
 
 
 System.Console.WriteLine("What color of floatig mana: G(reen), (Bl)U(e)");
-char choice = Convert.ToChar(System.Console.ReadLine().ToUpper());
+string choice = System.Console.ReadLine().ToUpper();
 
 if (lotusCobraValidChoices.Contains(choice))
 {
@@ -39,9 +39,9 @@ if (lotusCobraValidChoices.Contains(choice))
 }
 else 
 {
-    while (!lotusCobraValidChoices.Contains(choice))
+    while (! lotusCobraValidChoices.Contains(choice))
     {
-        choice = Convert.ToChar(System.Console.ReadLine().ToUpper());
+        choice = System.Console.ReadLine().ToUpper();
     }
 }
 
@@ -60,13 +60,15 @@ else
 {
     while (!tirelessProvider.Contains(choice))
     {
-        choice = Convert.ToChar(System.Console.ReadLine().ToUpper());
+        choice = System.Console.ReadLine().ToUpper();
     }
 }
 
 
-
+System.Console.WriteLine(choice);
 System.Console.WriteLine(insectToken);
 System.Console.WriteLine(scuteCopies);
 System.Console.WriteLine(gFMana);
 System.Console.WriteLine(uFMana);
+System.Console.WriteLine(foodToken);
+System.Console.WriteLine(treasureToken);
