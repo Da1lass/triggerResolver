@@ -23,5 +23,17 @@ public class landfallTrigger {
     {
         return uFMana + 1;
     }
+    public static string AesiTyrant() 
+    {
+        return "draw a card"; 
+    }
+    public static int TirelessProviderFood(int foodToken)
+    {
+        return foodToken += 1;
+    }
+    public static int TirelessProviderTreasure(int treasureToken)
+    {
+        return treasureToken += 1;
+    }
 }
 

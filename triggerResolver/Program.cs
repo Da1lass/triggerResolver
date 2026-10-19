@@ -3,11 +3,13 @@
 int gFMana; gFMana = 0;
 int uFMana; uFMana = 0;
 int cFMana; cFMana = 0;
-char[] lotuscobraValidChoices = ['G','U'];
+char[] lotusCobraValidChoices = ['G','U']; char[] tirelessProvider = ['F','T'];
 
 int landCount; landCount = 6;
 int scuteCopies; scuteCopies = 1;
 int insectToken; insectToken = 0;
+int foodToken; foodToken = 0;
+int treasureToken; treasureToken = 0;
 
 landfallTrigger landfall = new landfallTrigger();
 
@@ -24,24 +26,44 @@ else
 System.Console.WriteLine("What color of floatig mana: G(reen), (Bl)U(e)");
 char choice = Convert.ToChar(System.Console.ReadLine().ToUpper());
 
-if (lotuscobraValidChoices.Contains(choice))
+if (lotusCobraValidChoices.Contains(choice))
 {
-    if (choice == lotuscobraValidChoices[0])
+    if (choice == lotusCobraValidChoices[0])
     {
         gFMana = landfallTrigger.lotusCobraGM(gFMana);
     }
-    else if (choice == lotuscobraValidChoices[1]);
+    else if (choice == lotusCobraValidChoices[1]);
     {
         uFMana = landfallTrigger.lotusCobraUM(uFMana);
     }
 }
 else 
 {
-    while (!lotuscobraValidChoices.Contains(choice))
+    while (!lotusCobraValidChoices.Contains(choice))
     {
         choice = Convert.ToChar(System.Console.ReadLine().ToUpper());
     }
 }
+
+if (tirelessProvider.Contains(choice))
+{
+    if (choice == tirelessProvider[0])
+    {
+        foodToken = landfallTrigger.TirelessProviderFood(foodToken);
+    }
+    else if (choice == tirelessProvider[1]);
+    {
+        treasureToken = landfallTrigger.TirelessProviderTreasure(treasureToken);
+    }
+}
+else 
+{
+    while (!tirelessProvider.Contains(choice))
+    {
+        choice = Convert.ToChar(System.Console.ReadLine().ToUpper());
+    }
+}
+
 
 
 System.Console.WriteLine(insectToken);
